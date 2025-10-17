@@ -1,0 +1,177 @@
+.rms-recipe {
+  height: calc(100% - 64px);
+
+  :global {
+    .ant-tabs-nav {
+      background: #ffffff;
+      padding: 0 16px;
+      margin: 0;
+    }
+
+    .ant-tabs-content,
+    .ant-tabs-tabpane {
+      height: 100%;
+      //background: transparent;
+    }
+  }
+}
+
+.rms-query {
+  background: #ffffff;
+  padding: 8px 16px 0;
+  margin-bottom: 16px;
+}
+
+.rms-recipe-overview {
+  flex: 2 0 0;
+  min-width: 0;
+  border-right: 1px solid #f0f0f0;
+  box-sizing: border-box;
+
+  :global {
+    .ant-spin-nested-loading {
+      height: calc(100% - 64px);
+    }
+
+    .ant-spin-container {
+      height: 100%;
+    }
+  }
+
+  &__detail {
+    :global {
+      .ant-tabs-nav {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__container {
+    margin-bottom: 16px;
+    height: calc(100% - 16px);
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &__list {
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    height: 100%;
+    margin: 0 0 16px 0;
+    padding: 0 6px 0 16px;
+    box-sizing: border-box;
+
+    & > *:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    & > *:nth-child(-n+4) {
+      margin-top: 0;
+    }
+  }
+
+  &__item {
+    border: 1px solid #1fa741;
+    background: #e8ffec;
+    width: calc((100% - 48px) / 4);
+    height: 110px;
+    margin: 16px 16px 0 0;
+    flex: none;
+    box-sizing: border-box;
+    padding: 16px;
+
+    :global {
+      .ant-descriptions-header {
+        margin-bottom: 10px;
+      }
+
+      .ant-descriptions-item {
+        padding-bottom: 0;
+      }
+
+      .ant-descriptions-title,
+      .ant-descriptions-item-label {
+        color: #333333;
+      }
+    }
+
+    &--disabled {
+      border: 1px solid #5e5e5e;
+      background: #f8f8f8;
+    }
+
+    &--active {
+      border: 1px solid #0070e0;
+      background: #edf2fa;
+    }
+
+    * {
+      cursor: default;
+    }
+  }
+}
+
+.rms-recipe-realtime-alarm {
+  flex: 1 0 0;
+  min-width: 0;
+}
+
+.rms-recipe-group-container {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+}
+
+.rms-recipe-group,
+.rms-recipe-doc {
+  flex: 1 0 0;
+}
+
+.rms-btn-group {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+
+  & > *:not(:last-child) {
+    margin-right: 8px;
+  }
+}
+
+.overview-color-desc {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 14px;
+      margin-right: 3px;
+    }
+
+    &.online {
+      &::before {
+        background: #1fa741;
+      }
+    }
+
+    &.offline {
+      &::before {
+        background: #5e5e5e;
+      }
+    }
+
+    &.checked {
+      &::before {
+        background: #0070e0;
+      }
+    }
+  }
+}

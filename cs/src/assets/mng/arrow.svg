@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="40px" viewBox="0 0 10 40" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>形状结合</title>
+    <g id="CVD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path
+            d="M5,0 L10,7.84482759 L6.951,7.844 L6.95121951,40 L3.04878049,40 L3.048,7.844 L0,7.84482759 L5,0 Z"
+            id="形状结合" fill="#F04D4D"></path>
+    </g>
+</svg>

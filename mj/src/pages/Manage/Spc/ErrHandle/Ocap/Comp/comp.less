@@ -1,0 +1,113 @@
+.ocap_status_bar {
+
+    .ocap_stat_pending {
+        width: 30px;
+        height: 30px;
+        background: url(../../../../../../assets/ocap/lock.png) no-repeat center/100%;
+    }
+
+    .ocap_stat_completed {
+        width: 30px;
+        height: 30px;
+        background: url(../../../../../../assets/ocap/finish.png) no-repeat center/100%;
+    }
+
+    .ocap_stat_processing {
+        width: 38px;
+        height: 38px;
+        background: url(../../../../../../assets/ocap/running.png) no-repeat center/100%;
+    }
+
+    .line_completed {
+        width: 78px;
+        height: 4px;
+        border-radius: 2px;
+        background: #2BA471;
+        margin-bottom: 22px;
+    }
+
+    .line_pending {
+        width: 78px;
+        height: 4px;
+        border-radius: 2px;
+        margin-bottom: 22px;
+        background: #C7C7CC;
+    }
+
+    .line_processing {
+        width: 78px;
+        height: 4px;
+        border-radius: 2px;
+        overflow: hidden;
+        margin-bottom: 22px;
+        background: #C7C7CC;
+
+        div {
+            width: 40px;
+            height: 4px;
+            background: #0070E0;
+        }
+    }
+
+    .ocap_timer {
+        margin-left: 40px;
+        color: #2BA471;
+        font-size: 16px;
+        font-weight: bold;
+        display: flex;
+
+        .ocap_timer_img {
+            width: 20px;
+            height: 20px;
+            background: url(../../../../../../assets/ocap/timer.png) no-repeat center/100%;
+        }
+
+        span {
+            margin-left: 5px;
+        }
+    }
+}
+
+.ocap_err_table {
+    // height: 300px;
+
+    .dealwith_orange {
+        color: #FF9500;
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .dealwith_green {
+        color: #2BA471;
+        font-weight: 600;
+        font-size: 15px;
+    }
+}
+
+.ocap_reason_root {
+    .ant-collapse-header{
+        padding: 0;
+    }
+}
+
+.ocap_title {
+    color: #333333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.ocap_tag_green {
+    padding: 2px 5px;
+    background: #FAFAFA;
+    border-radius: 2px;
+    border: 1px solid #2BA471;
+    color: #2BA471;
+}
+
+.ocap_tag_red {
+    padding: 2px 5px;
+    background: #FAFAFA;
+    border-radius: 2px;
+    border: 1px solid #FF3B30;
+    color: #FF3B30;
+}

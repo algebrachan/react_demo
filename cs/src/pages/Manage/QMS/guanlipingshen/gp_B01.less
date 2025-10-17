@@ -1,0 +1,344 @@
+#gp-b01-app {
+  * {
+
+    box-sizing: border-box;
+  }
+
+  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  color: #333;
+  min-height: 100vh;
+  padding: 20px;
+
+  .gp-b01-container {
+    margin: 0 auto;
+  }
+
+  .gp-b01-header {
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    background: linear-gradient(120deg, #1a73e8, #0d47a1);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+
+  .gp-b01-back-btn {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateX(-3px);
+    }
+  }
+
+  .gp-b01-stats {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .gp-b01-stat-card {
+    text-align: center;
+    padding: 15px;
+    flex: 1;
+  }
+
+  .gp-b01-stat-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1a73e8;
+    margin: 10px 0;
+  }
+
+  .gp-b01-stat-label {
+    color: #5f6368;
+    font-size: 1rem;
+  }
+
+  .gp-b01-department-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  .gp-b01-department-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .gp-b01-card-header {
+    background: linear-gradient(120deg, #4285f4, #1a73e8);
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+    .anticon {
+      font-size: 1.8rem;
+      margin-right: 15px;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+
+  .gp-b01-card-body {
+    padding: 20px;
+  }
+
+  .gp-b01-file-list {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .gp-b01-file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #f9f9f9;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .gp-b01-file-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .gp-b01-file-name {
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .gp-b01-file-meta {
+    display: flex;
+    font-size: 0.85rem;
+    color: #5f6368;
+  }
+
+  .gp-b01-file-size {
+    margin-right: 15px;
+  }
+
+  .gp-b01-file-actions {
+    display: flex;
+    gap: 10px;
+  }
+
+ 
+  .gp-b01-upload-section {
+    margin-top: 20px;
+  }
+
+
+
+ 
+
+  .gp-b01-progress-section {
+    margin-top: 15px;
+  }
+
+  .gp-b01-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+
+
+
+  .gp-b01-pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    .ant-pagination {
+      .ant-pagination-total-text {
+        color: #5f6368;
+        font-size: 14px;
+        margin-right: 16px;
+      }
+      
+      .ant-pagination-item {
+        border-radius: 6px;
+        margin: 0 4px;
+        border: 1px solid #dadce0;
+        
+        &.ant-pagination-item-active {
+          background-color: #1a73e8;
+          border-color: #1a73e8;
+          
+          a {
+            color: white;
+          }
+        }
+        
+        &:hover {
+          border-color: #1a73e8;
+          
+          a {
+            color: #1a73e8;
+          }
+        }
+      }
+      
+      .ant-pagination-jump-prev, .ant-pagination-jump-next {
+        border-radius: 6px;
+        margin: 0 4px;
+        border: 1px solid #dadce0;
+        
+        &:hover {
+          border-color: #1a73e8;
+          color: #1a73e8;
+        }
+      }
+      
+      .ant-pagination-prev, .ant-pagination-next {
+        border-radius: 6px;
+        margin: 0 4px;
+        border: 1px solid #dadce0;
+        
+        &:hover {
+          border-color: #1a73e8;
+          color: #1a73e8;
+        }
+      }
+      
+      .ant-pagination-options {
+        .ant-select {
+          margin: 0 8px;
+          
+          .ant-select-selector {
+            border-radius: 6px;
+            border: 1px solid #dadce0;
+          }
+        }
+        
+        .ant-pagination-options-quick-jumper {
+          margin-left: 16px;
+          color: #5f6368;
+          
+          input {
+            border-radius: 6px;
+            margin: 0 8px;
+            border: 1px solid #dadce0;
+            
+            &:focus {
+              border-color: #1a73e8;
+              box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .gp-b01-footer {
+    text-align: center;
+    padding: 25px;
+    color: #5f6368;
+    font-size: 0.95rem;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+  }
+
+  .gp-b01-no-files {
+    text-align: center;
+    padding: 30px 0;
+    color: #80868b;
+
+    .anticon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      opacity: 0.3;
+      display: block;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+  }
+
+  // 响应式设计
+  @media (max-width: 768px) {
+    .gp-b01-department-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .gp-b01-header {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .gp-b01-stats {
+      flex-direction: column;
+    }
+
+    .gp-b01-stat-card {
+      margin-bottom: 15px;
+    }
+
+    
+  }
+}

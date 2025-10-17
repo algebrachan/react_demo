@@ -1,0 +1,287 @@
+.tpm_root {
+    background: #223D62;
+    width: 100vw;
+    // height: 100vh;
+    min-width: 1600px;
+    overflow-y: overlay;
+
+    .tpm_head {
+        background-image: url("../../assets/tpm/head_bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 80px;
+        width: 100%;
+        position: relative;
+
+        .title {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%; // 确保高度继承
+            font-family: Noto Sans SC, Noto Sans SC;
+            font-weight: 900;
+            font-size: 45px;
+            color: #DEFBFF;
+            text-align: center;
+            font-style: normal;
+            text-transform: none;
+            letter-spacing: 10px;
+        }
+
+        .menu1 {
+            left: 80px;
+        }
+
+        .menu2 {
+            left: 300px;
+        }
+
+        .menu1,
+        .menu2 {
+            cursor: pointer;
+            top: 30px;
+            z-index: 2;
+            position: absolute;
+            width: 240px;
+            height: 60px;
+            background: url('../../assets/tpm/menu_left.png') center center no-repeat;
+            background-size: cover;
+            color: #BCE4FF;
+            text-align: center;
+            line-height: 42px;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .active0,
+        .active1 {
+            width: 240px;
+            height: 60px;
+            background: url('../../assets/tpm/menu_left_select.png') center center no-repeat;
+            background-size: cover;
+        }
+
+
+
+        .menu3 {
+            right: 300px;
+        }
+
+        .menu4 {
+            right: 80px;
+        }
+
+        .menu3,
+        .menu4 {
+            cursor: pointer;
+            top: 30px;
+            z-index: 2;
+            position: absolute;
+            width: 240px;
+            height: 60px;
+            background: url('../../assets/tpm/menu_right.png') center center no-repeat;
+            background-size: cover;
+            color: #BCE4FF;
+            text-align: center;
+            line-height: 42px;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .active2,
+        .active3 {
+            width: 240px;
+            height: 60px;
+            background: url('../../assets/tpm/menu_right_select.png') center center no-repeat;
+            background-size: cover;
+        }
+
+    }
+
+    .common_box_root {
+        width: 100%;
+
+        .header {
+            height: 40px;
+            background: linear-gradient(90deg, rgba(90, 121, 157, 0.29) 0%, rgba(90, 121, 157, 0.29) 66%, rgba(90, 121, 157, 0) 95%);
+            border-bottom: 2px solid #BED8F6;
+            display: flex;
+
+            .icon1 {
+                width: 8px;
+                height: 42px;
+                background: #46C2FC;
+                transform: skewX(-10deg);
+            }
+
+            .icon2 {
+                width: 6px;
+                height: 28px;
+                margin-top: 5px;
+                background: #fff;
+                transform: skewX(-10deg);
+            }
+
+            .title {
+                font-family: Noto Sans SC, Noto Sans SC;
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 40px;
+                margin-left: 12px;
+                color: #DEFBFF;
+            }
+        }
+
+        .body {
+            background: linear-gradient(180deg, rgba(35, 77, 123, 0) 0%, #234D7B 100%);
+            ;
+            border-radius: 4px 4px 4px 4px;
+            padding: 16px;
+            box-sizing: border-box;
+            color: #C6D1DB;
+        }
+    }
+
+    .tpm_content {
+        margin-top: 10px;
+        padding: 20px;
+        box-sizing: border-box;
+
+        .box1 {
+            color: #fff;
+            font-weight: bold;
+            width: 260px;
+            height: 90px;
+            background: url('../../assets/tpm/box1.png') center center no-repeat;
+            background-size: cover;
+            padding: 16px;
+            box-sizing: border-box;
+
+            .icon1 {
+                width: 64px;
+                height: 64px;
+                background: url('../../assets/tpm/icon1.png') center center no-repeat;
+                background-size: cover;
+            }
+
+            .count1 {
+                color: #FB8700;
+                font-size: 30px;
+            }
+
+            .icon2 {
+                width: 64px;
+                height: 64px;
+                background: url('../../assets/tpm/icon2.png') center center no-repeat;
+                background-size: cover;
+            }
+
+            .count2 {
+                color: #38D7FF;
+                font-size: 30px;
+            }
+
+            .icon3 {
+                width: 64px;
+                height: 64px;
+                background: url('../../assets/tpm/icon3.png') center center no-repeat;
+                background-size: cover;
+            }
+
+            .count3 {
+                color: #FA67F8;
+                font-size: 30px;
+            }
+
+            .icon4 {
+                width: 64px;
+                height: 64px;
+                background: url('../../assets/tpm/icon4.png') center center no-repeat;
+                background-size: cover;
+            }
+
+            .count4 {
+                color: #74FF98;
+                font-size: 30px;
+            }
+        }
+
+        .box2 {
+            width: 260px;
+            height: 210px;
+            background: url('../../assets/tpm/box2.png') center center no-repeat;
+            background-size: cover;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    }
+
+    table {
+        border-spacing: 0 4px;
+    }
+
+    .custom-scroll-table {
+        .ant-table-body {
+            /* Firefox 滚动条样式 */
+            scrollbar-width: thin;
+            scrollbar-color: #3395ca #234D7B;
+
+            /* Chrome/Safari 滚动条样式 */
+            &::-webkit-scrollbar {
+                width: 2px;
+                /* 垂直滚动条宽度 */
+                height: 6px;
+                /* 水平滚动条高度 */
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #234D7B;
+                /* 滚动条轨道颜色 */
+                border-radius: 2px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #1AAAF7;
+                /* 滚动条滑块颜色 */
+                border-radius: 3px;
+                transition: background 0.2s;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: #0e8cff;
+                /* 滑块hover颜色 */
+            }
+        }
+    }
+
+    .tpm_btn {
+        display: flex;
+        width: 80px;
+        height: 24px;
+        padding: 4px 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        background: #0F2953;
+        cursor: pointer;
+    }
+
+    .tpm_btn_selt {
+        cursor: pointer;
+        color: #38d7ff;
+        display: flex;
+        width: 80px;
+        height: 24px;
+        padding: 4px 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-top: 1px solid #29A3FF;
+        background: linear-gradient(180deg, #29a3ff80 0%, #29a3ff00 100%);
+    }
+
+}

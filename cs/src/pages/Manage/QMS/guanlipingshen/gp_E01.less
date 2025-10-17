@@ -1,0 +1,460 @@
+#gp-e01-app {
+  * {
+ 
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+
+  padding: 20px;
+  color: #333;
+
+  .gp-e01-management-review-container {
+    margin: 0 auto;
+  }
+
+  .gp-e01-header-card {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+
+    .ant-card-body {
+      padding: 0;
+    }
+  }
+
+  .gp-e01-header-content {
+    text-align: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .gp-e01-title {
+    font-size: 28px;
+    color: #1a365d;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .gp-e01-subtitle {
+    font-size: 18px;
+    color: #4a5568;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  .gp-e01-document-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 16px;
+    color: #718096;
+    margin-top: 15px;
+  }
+
+  .gp-e01-main-card {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  .gp-e01-instructions-section {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .gp-e01-instruction-block {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+    &.gp-e01-orange {
+      background: linear-gradient(145deg, #fff3e0, #ffe0b2);
+      color: #e65100;
+      border-left: 4px solid #ff9800;
+    }
+
+    &.gp-e01-green {
+      background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
+      color: #2e7d32;
+      border-left: 4px solid #4caf50;
+    }
+
+    &.gp-e01-blue {
+      background: linear-gradient(145deg, #e3f2fd, #bbdefb);
+      color: #1565c0;
+      border-left: 4px solid #2196f3;
+    }
+  }
+
+  .gp-e01-color-label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    margin-right: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .gp-e01-instruction-block.gp-e01-orange .gp-e01-color-label {
+    background: linear-gradient(145deg, #ff9800, #f57c00);
+  }
+
+  .gp-e01-instruction-block.gp-e01-green .gp-e01-color-label {
+    background: linear-gradient(145deg, #4caf50, #2e7d32);
+  }
+
+  .gp-e01-instruction-block.gp-e01-blue .gp-e01-color-label {
+    background: linear-gradient(145deg, #2196f3, #1976d2);
+  }
+
+  .gp-e01-role-selector {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #edf2f7;
+    border-radius: 6px;
+  }
+
+  .gp-e01-improvement-table {
+    margin: 0 20px 20px;
+    border: 1px solid #ebeef5;
+    border-radius: 6px;
+    overflow: hidden;
+
+    .ant-table-thead > tr > th {
+      background: #f5f7fa !important;
+      font-weight: bold;
+      color: #1a365d;
+      text-align: center;
+    }
+
+    .ant-table-tbody > tr > td {
+      padding: 8px 12px;
+      vertical-align: middle;
+    }
+
+    .orange-cell {
+      background-color: #fff3e0 !important;
+      
+      .ant-input, .ant-select, .ant-picker {
+        border: 1px solid #ffcc80;
+        border-radius: 4px;
+        
+        &:hover {
+          border-color: #ff9800;
+        }
+        
+        &:focus, &.ant-picker-focused {
+          border-color: #ff9800;
+          box-shadow: 0 0 0 2px rgba(255, 152, 0, 0.2);
+        }
+      }
+    }
+
+    .green-cell {
+      background-color: #e8f5e9 !important;
+      
+      .ant-input, .ant-select, .ant-picker {
+        border: 1px solid #a5d6a7;
+        border-radius: 4px;
+        
+        &:hover {
+          border-color: #4caf50;
+        }
+        
+        &:focus, &.ant-picker-focused {
+          border-color: #4caf50;
+          box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+        }
+      }
+      
+
+    }
+
+    .blue-cell {
+      background-color: #e3f2fd !important;
+      
+      .ant-input, .ant-select, .ant-picker {
+        border: 1px solid #90caf9;
+        border-radius: 4px;
+        
+        &:hover {
+          border-color: #2196f3;
+        }
+        
+        &:focus, &.ant-picker-focused {
+          border-color: #2196f3;
+          box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+        }
+      }
+    }
+
+    .status-cell {
+      font-weight: 500;
+      text-align: center;
+    }
+
+    // 通用输入框样式优化
+    .ant-input, .ant-select-selector, .ant-picker {
+      font-size: 14px;
+      transition: all 0.3s ease;
+      
+      &::placeholder {
+        color: #bfbfbf;
+        font-size: 13px;
+      }
+    }
+    
+    .ant-select {
+      .ant-select-selection-item {
+        font-size: 14px;
+      }
+    }
+    
+    .ant-input[disabled], .ant-select-disabled .ant-select-selector, .ant-picker-disabled {
+      background-color: #f5f5f5;
+      color: #999;
+      cursor: not-allowed;
+    }
+    
+    // TextArea 样式优化
+    .ant-input {
+      resize: vertical;
+      min-height: 32px;
+    }
+    
+
+    // 分页样式优化
+    .ant-pagination {
+      margin: 16px 0;
+      text-align: center;
+      
+      .ant-pagination-total-text {
+        color: #666;
+        font-size: 14px;
+        margin-right: 16px;
+      }
+      
+      .ant-pagination-item {
+        border-radius: 4px;
+        margin: 0 4px;
+        
+        &.ant-pagination-item-active {
+          background-color: #1890ff;
+          border-color: #1890ff;
+          
+          a {
+            color: white;
+          }
+        }
+        
+        &:hover {
+          border-color: #40a9ff;
+          
+          a {
+            color: #40a9ff;
+          }
+        }
+      }
+      
+      .ant-pagination-jump-prev, .ant-pagination-jump-next {
+        border-radius: 4px;
+        margin: 0 4px;
+        
+        &:hover {
+          border-color: #40a9ff;
+          color: #40a9ff;
+        }
+      }
+      
+      .ant-pagination-prev, .ant-pagination-next {
+        border-radius: 4px;
+        margin: 0 4px;
+        
+        &:hover {
+          border-color: #40a9ff;
+          color: #40a9ff;
+        }
+      }
+      
+      .ant-pagination-options {
+        .ant-select {
+          margin: 0 8px;
+        }
+        
+        .ant-pagination-options-quick-jumper {
+          margin-left: 16px;
+          
+          input {
+            border-radius: 4px;
+            margin: 0 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .gp-e01-action-buttons {
+    margin: 20px;
+    text-align: right;
+  }
+
+ 
+
+  .gp-e01-approval-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+
+  .gp-e01-approval-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  }
+
+  .gp-e01-approval-item {
+    text-align: center;
+    min-width: 250px;
+
+    div:first-child {
+      font-size: 16px;
+      color: #4a5568;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+  }
+
+  .gp-e01-signature-line {
+    height: 1px;
+    width: 180px;
+    background-color: #cbd5e0;
+    margin: 10px auto;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      right: 0;
+      height: 40px;
+      border-bottom: 1px solid #cbd5e0;
+    }
+  }
+
+  .gp-e01-footer-note {
+    text-align: center;
+    padding: 15px;
+    color: #718096;
+    font-size: 14px;
+    border-top: 1px solid #e2e8f0;
+    background-color: #f8f9fa;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .gp-e01-evidence-dialog {
+    padding: 10px;
+  }
+
+  .gp-e01-evidence-preview {
+    border-top: 1px solid #ebeef5;
+    padding-top: 20px;
+    margin-top: 20px;
+
+    h4 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+  }
+
+  .gp-e01-file-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .gp-e01-file-icon {
+    margin-right: 12px;
+    color: #2196f3;
+    font-size: 20px;
+  }
+
+  .gp-e01-file-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .gp-e01-empty-state {
+    color: #a0aec0;
+    text-align: center;
+    padding: 25px 0;
+    font-style: italic;
+    font-size: 15px;
+  }
+
+  // 响应式设计
+  @media (max-width: 1200px) {
+    .gp-e01-instructions-section {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .gp-e01-document-info {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px;
+
+    .gp-e01-title {
+      font-size: 24px;
+    }
+
+    .gp-e01-subtitle {
+      font-size: 16px;
+    }
+
+    .gp-e01-role-selector {
+      flex-direction: column;
+      gap: 10px;
+
+      
+    }
+
+    .gp-e01-approval-section {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .gp-e01-approval-item {
+      min-width: auto;
+    }
+  }
+}

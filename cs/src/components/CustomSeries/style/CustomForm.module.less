@@ -1,0 +1,34 @@
+.custom-form {
+  width: 100%;
+
+  :global {
+    .ant-row {
+      width: 100%;
+    }
+
+    .ant-col--last {
+      .ant-form-item {
+        margin-inline-end: 0;
+      }
+    }
+
+    .ant-form-item-control-input-content > * {
+      width: 100%;
+    }
+
+    .ant-form-item {
+      margin-bottom: 8px;
+
+      &-label {
+        flex-shrink: 0;
+      }
+    }
+
+    // 对于没有label的表单项，调整对齐
+    .ant-form-item-no-label {
+      .ant-form-item-control {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,317 @@
+.login_root1,
+.login_root2,
+.login_root3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .login_form_root {
+        position: relative;
+        width: 1234px;
+        height: 654px;
+        flex-shrink: 0;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px 0 #00000080;
+
+        .form_left {
+            position: absolute;
+            flex-shrink: 0;
+            width: 756px;
+            height: 654px;
+            border-radius: 20px 0 0 20px;
+            left: -1px;
+            z-index: 1;
+
+            .carousel {
+                height: 430px;
+                z-index: 5;
+
+                .img {
+                    width: 365px;
+                    height: 203px;
+                    background: url('./assets/show_img.png');
+                }
+
+                .title {
+                    width: 100%;
+                    margin-top: 56px;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 20px;
+                }
+
+                .text {
+                    margin-top: 10px;
+                    width: 100%;
+                    color: #e0e0e0;
+                    text-align: center;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .form_right {
+            position: absolute;
+            width: 478px;
+            height: 654px;
+            right: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .login_content {
+                width: 325px;
+                height: 600px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+
+                .logo {
+                    width: 156px;
+                    height: 49px;
+                    margin-top: 30px;
+                    background: url('./assets/login_jsg.png') 100% no-repeat;
+                }
+
+                .title {
+                    text-align: center;
+                    font-family: "Noto Sans SC";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    margin-bottom: 13px;
+
+                }
+
+                .ant-form-item {
+                    margin-bottom: 10px;
+                }
+
+                .ipt {
+                    width: 325px;
+                    height: 50px;
+                }
+
+                .btn_content {
+                    display: flex;
+                    width: 100%;
+
+                    justify-content: space-between;
+
+                    .btn_cancel {
+                        width: 158px;
+                        height: 50px;
+                        border-radius: 2px;
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: #f2f2f2;
+                        box-shadow: 0 0 #fff;
+                    }
+
+                    .btn_ok {
+                        width: 158px;
+                        height: 50px;
+                        border-radius: 2px;
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: #f2f2f2;
+                        box-shadow: 0 0 #fff;
+                    }
+                }
+
+                .foot {
+                    margin-top: 40px;
+                    color: #828282;
+                    font-family: "Noto Sans SC";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
+
+.login_root1 {
+    background: url('./assets/login_bg1.png') 50% 50% no-repeat;
+    background-size: cover;
+    width: calc(100vw);
+    height: calc(100vh);
+
+    .login_form_root {
+        background: #FFF;
+
+        .form_left {
+            background: url('./assets/login_left1.png') 100% no-repeat;
+        }
+
+        .form_right {
+            .login_content {
+                .title {
+                    color: #333333;
+                }
+
+                .ant-form-item-label>label {
+                    color: #333333;
+                    font-family: "Noto Sans SC";
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: 16px;
+                }
+
+                .ipt {
+                    background: #F2F2F2;
+                    border: 1px solid var(--component-color-border1, #7E8696);
+                    color: #333333;
+
+                    .ant-input {
+                        background: #F2F2F2;
+                        color: #333333;
+                    }
+                }
+
+                input::-webkit-input-placeholder {
+                    color: #828282;
+                }
+
+                .btn_content {
+                    .btn_cancel {
+                        background: var(--text-color-disabled, #828282);
+                    }
+
+                    .btn_ok {
+                        background: #4264E5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.login_root2 {
+    background: url('./assets/login_bg2.png') 50% 50% no-repeat;
+    background-size: cover;
+    width: calc(100vw);
+    height: calc(100vh);
+
+    .login_form_root {
+        background: var(--bg-color-container, #393E46);
+
+        .form_left {
+            background: url('./assets/login_left2.png') 100% no-repeat;
+        }
+
+        .form_right {
+            .login_content {
+                .title {
+                    color: #f2f2f2;
+                }
+
+                .ant-form-item-label>label {
+                    color: #f2f2f2;
+                    font-family: "Noto Sans SC";
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: 16px;
+                }
+
+                .ipt {
+                    background: var(--bg-color-secondarycontainer, #474B53);
+                    border: 1px solid var(--component-color-border1, #7E8696);
+                    color: #f2f2f2;
+
+                    .ant-input {
+                        background: var(--bg-color-secondarycontainer, #474B53);
+                        color: #f2f2f2;
+                    }
+                }
+
+                input::-webkit-input-placeholder {
+                    color: #bdbdbd;
+                }
+
+                .btn_content {
+                    .btn_cancel {
+                        background: var(--bg-color-btn2, #888E9D);
+                    }
+
+                    .btn_ok {
+                        background: #4264E5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.login_root3 {
+    background: url('./assets/login_bg3.png') 50% 50% no-repeat;
+    background-size: cover;
+    width: calc(100vw);
+    height: calc(100vh);
+
+    .login_form_root {
+        background: var(--bg-color-container, #393E46);
+
+        .form_left {
+            background: url('./assets/login_left3.png') 100% no-repeat;
+        }
+
+        .form_right {
+            .login_content {
+                .title {
+                    color: #f2f2f2;
+                }
+
+                .ant-form-item-label>label {
+                    color: #f2f2f2;
+                    font-family: "Noto Sans SC";
+                    font-weight: 700;
+                    font-style: normal;
+                    font-size: 16px;
+                }
+
+                .ipt {
+                    background: var(--bg-color-secondarycontainer, #474B53);
+                    border: 1px solid var(--component-color-border1, #7E8696);
+                    color: #f2f2f2;
+
+                    .ant-input {
+                        background: var(--bg-color-secondarycontainer, #474B53);
+                        color: #f2f2f2;
+                    }
+                }
+
+                input::-webkit-input-placeholder {
+                    color: #bdbdbd;
+                }
+
+
+
+                .btn_content {
+                    .btn_cancel {
+                        background: var(--bg-color-btn2, #888E9D);
+                    }
+
+                    .btn_ok {
+                        background: var(--brand-color, #00ADB5);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.activation_info {
+    background: #d6e4ff;
+    height: 40px;
+    width: 100%;
+    padding: 12px;
+    color: #333;
+    box-sizing: border-box;
+    border-radius: 2px;
+}

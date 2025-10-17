@@ -1,0 +1,448 @@
+.large_screen_root {
+    width: 100vw;
+    height: 100vh;
+    background: #1A2E4F;
+    // background: #27456D;
+    background: url('../../assets/large_screen/bg.png') 100% 100% no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(to bottom,
+                rgba(26, 46, 79, 0.8) 0%,
+                rgba(26, 46, 79, 0.2) 100%);
+        z-index: 0; // 确保在背景图之上
+    }
+
+    .large_screen_header {
+        position: relative;
+        margin: 0 auto;
+        width: 100vw;
+        height: 127px;
+        background: url('../../assets/large_screen/header.png') 100% 100% no-repeat;
+        background-size: 100% 100%;
+        z-index: 1;
+
+        .title {
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%; // 确保高度继承
+            font-family: Noto Sans SC, Noto Sans SC;
+            font-weight: 900;
+            font-size: 56px;
+            color: #DEFBFF;
+            text-align: center;
+            font-style: normal;
+            text-transform: none;
+        }
+
+        .time {
+            position: absolute;
+            right: 80px;
+            top: 25px;
+            font-family: Noto Sans SC, Noto Sans SC;
+            font-weight: bold;
+            font-size: 20px;
+            color: #FFFFFF;
+        }
+    }
+
+    .large_screen_dev_content {
+        position: relative;
+        margin: 17px auto;
+        width: 3156px;
+        height: 758px;
+        background: url('../../assets/large_screen/dev_content.png') 100% 100% no-repeat;
+
+        .arrow1 {
+            width: 41px;
+            height: 59px;
+            position: absolute;
+            background: url('../../assets/large_screen/arrow2.png') 100% 100% no-repeat;
+            top: 205px;
+            left: 380px;
+        }
+
+        .arrow2 {
+            width: 59px;
+            height: 41px;
+            position: absolute;
+            background: url('../../assets/large_screen/arrow1.png') 100% 100% no-repeat;
+            top: 300px;
+            left: 620px;
+        }
+
+        .arrow3 {
+            width: 59px;
+            height: 41px;
+            position: absolute;
+            background: url('../../assets/large_screen/arrow1.png') 100% 100% no-repeat;
+            top: 400px;
+            left: 590px;
+        }
+
+        .arrow4 {
+            width: 59px;
+            height: 41px;
+            position: absolute;
+            background: url('../../assets/large_screen/arrow1.png') 100% 100% no-repeat;
+            top: 85px;
+            left: 1010px;
+        }
+
+        .arrow5 {
+            width: 59px;
+            height: 41px;
+            position: absolute;
+            background: url('../../assets/large_screen/arrow1.png') 100% 100% no-repeat;
+            bottom: 160px;
+            left: 860px;
+        }
+
+        .arrow6 {
+            width: 59px;
+            height: 41px;
+            position: absolute;
+            background: url('../../assets/large_screen/arrow1.png') 100% 100% no-repeat;
+            top: 310px;
+            left: 1730px;
+        }
+
+        .arrow7 {
+            width: 59px;
+            height: 41px;
+            position: absolute;
+            background: url('../../assets/large_screen/arrow1.png') 100% 100% no-repeat;
+            bottom: 106px;
+            left: 1640px;
+        }
+
+        .arrow8 {
+            width: 59px;
+            height: 41px;
+            position: absolute;
+            background: url('../../assets/large_screen/arrow1.png') 100% 100% no-repeat;
+            top: 310px;
+            right: 460px;
+        }
+
+        .arrow9 {
+            width: 59px;
+            height: 41px;
+            position: absolute;
+            background: url('../../assets/large_screen/arrow1.png') 100% 100% no-repeat;
+            bottom: 106px;
+            right: 816px;
+        }
+
+        .process1 {
+            position: absolute;
+            top: 100px;
+            left: 700px;
+            width: 2267px;
+            height: 236px;
+            background: url('../../assets/large_screen/process1.png') 100% 100% no-repeat;
+        }
+
+        .process2 {
+            position: absolute;
+            bottom: 120px;
+            left: 660px;
+            width: 2177px;
+            height: 221px;
+            background: url('../../assets/large_screen/process2.png') 100% 100% no-repeat;
+        }
+
+        .dev_box1,
+        .dev_box2,
+        .dev_box3,
+        .dev_box4 {
+            position: absolute;
+
+            .title {
+                font-family: Noto Sans SC, Noto Sans SC;
+                font-weight: bold;
+                font-size: 42px;
+                font-style: normal;
+                background: linear-gradient(180deg, #FFFFFF 0%, #97CDFF 100%);
+                /* 2. 将背景裁剪到文字区域 */
+                -webkit-background-clip: text;
+                /* 兼容 WebKit 内核浏览器（Chrome/Safari） */
+                background-clip: text;
+                /* 3. 隐藏原始文字颜色，显示渐变背景 */
+                color: transparent;
+                /* 其他样式 */
+                display: inline-block;
+                /* 确保渐变生效 */
+            }
+        }
+
+        .dev_box1 {
+            width: 488px;
+            height: 173px;
+            top: 40px;
+            left: 200px;
+            background: url('../../assets/large_screen/dev_box1.png') 100% 100% no-repeat;
+
+            .title {
+                position: absolute;
+                top: 20px;
+                left: 65px;
+            }
+        }
+
+        .dev_box2 {
+            width: 575px;
+            height: 456px;
+            bottom: 40px;
+            left: 50px;
+            background: url('../../assets/large_screen/dev_box2.png') 100% 100% no-repeat;
+
+            .title {
+                position: absolute;
+                top: 24px;
+                left: 150px;
+            }
+        }
+
+        .dev_box3 {
+            width: 901px;
+            height: 659px;
+            top: 50px;
+            left: 910px;
+            background: url('../../assets/large_screen/dev_box3.png') 100% 100% no-repeat;
+
+            .title {
+                position: absolute;
+                top: 24px;
+                left: 200px;
+            }
+        }
+
+        .dev_box4 {
+            width: 1046px;
+            height: 659px;
+            top: 50px;
+            right: 440px;
+            background: url('../../assets/large_screen/dev_box4.png') 100% 100% no-repeat;
+
+            .title {
+                position: absolute;
+                top: 24px;
+                left: 200px;
+            }
+        }
+
+        .dev1_on,
+        .dev1_off {
+            position: absolute;
+            width: 91px;
+            height: 66px;
+            z-index: 5;
+
+            .text {
+                width: 60px;
+                margin-left: 12px;
+                text-align: center;
+                white-space: normal;
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
+
+        .dev1_on {
+            background: url('../../assets/large_screen/dev1_on.png') 100% 100% no-repeat;
+        }
+
+        .dev1_off {
+            background: url('../../assets/large_screen/dev1_off.png') 100% 100% no-repeat;
+        }
+
+        .dev2_on,
+        .dev2_off {
+            position: absolute;
+            z-index: 5;
+            width: 62px;
+            height: 66px;
+
+            .text {
+                width: 45px;
+                height: 40px;
+                margin-left: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                white-space: normal;
+                font-weight: bold;
+                font-size: 16px;
+            }
+        }
+
+        .dev2_on {
+            background: url('../../assets/large_screen/dev2_on.png') 100% 100% no-repeat;
+        }
+
+        .dev2_off {
+            background: url('../../assets/large_screen/dev2_off.png') 100% 100% no-repeat;
+        }
+    }
+
+    .large_screen_chart_content {
+        padding: 32px;
+        box-sizing: border-box;
+    }
+
+    .dev_status_item {
+        color: #C6D1DB;
+        font-size: 18px;
+        padding: 0 20px;
+
+        .icon {
+            width: 44px;
+            height: 39px;
+            background: url('../../assets/large_screen/dev_status.png') 100% 100% no-repeat;
+        }
+
+        .count {
+            span:first-child {
+                color: #00EFA3; // 使用亮绿色
+            }
+        }
+    }
+
+    .common_box_root {
+        width: 100%;
+
+        .header {
+            height: 48px;
+            background: linear-gradient(90deg, rgba(90, 121, 157, 0.29) 0%, rgba(90, 121, 157, 0.29) 66%, rgba(90, 121, 157, 0) 95%);
+            border-bottom: 2px solid #BED8F6;
+            display: flex;
+
+            .icon1 {
+                width: 8px;
+                height: 50px;
+                background: #46C2FC;
+                transform: skewX(-10deg);
+            }
+
+            .icon2 {
+                width: 6px;
+                height: 30px;
+                margin-top: 5px;
+                background: #fff;
+                transform: skewX(-10deg);
+            }
+
+            .title {
+                font-family: Noto Sans SC, Noto Sans SC;
+                font-weight: 900;
+                font-size: 26px;
+                line-height: 48px;
+                margin-left: 12px;
+                color: #DEFBFF;
+            }
+        }
+
+        .body {
+            background: #142B4B;
+            border-radius: 4px 4px 4px 4px;
+            padding: 16px;
+            box-sizing: border-box;
+            color: #C6D1DB;
+        }
+    }
+
+    .table_root {
+        height: 300px;
+        font-size: 16px;
+        overflow: auto;
+        table{
+            background: transparent !important;
+
+        }
+        .tb_header {
+            height: 44px;
+            font-weight: 400;
+            color: #C4CBEB;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .tb_row {
+            height: 44px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            background: linear-gradient(270deg, rgba(61, 159, 255, 0.2) 0%, rgba(0, 59, 159, 0.4) 100%);
+            box-shadow: inset -1px -1px 4px 0px rgba(110, 220, 255, 0.2);
+            color: #FFFFFF;
+        }
+
+        .tb_ceil {
+            width: 120px;
+            text-align: left;
+        }
+    }
+
+    .monitor_root {
+        height: 718px;
+        overflow: auto;
+
+        .monitor {
+            height: 100%;
+            background: #183661;
+            white-space: pre-wrap;
+            font-size: 20px;
+            color: #C6D1DB;
+        }
+    }
+
+    .finish_situation {
+        height: 300px;
+        padding: 20px;
+        box-sizing: border-box;
+
+        .situation_item {
+            width: 200px;
+
+            span:first-child {
+                display: inline-block;
+                font-weight: 400;
+                font-size: 16px;
+                color: #FFFFFF;
+                width: 120px;
+            }
+
+            span:nth-child(2) {
+                font-family: Noto Sans SC, Noto Sans SC;
+                font-weight: 900;
+                font-size: 26px;
+                color: #46C2FC;
+                text-transform: none;
+            }
+        }
+
+        .situation_chart {
+            margin: auto 0;
+            width: 192px;
+            height: 212px;
+            background: url('../../assets/large_screen/circle.png') 100% 100% no-repeat;
+            display: flex; // 启用弹性布局
+            align-items: center; // 垂直居中
+            justify-content: center; // 水平居中
+            flex-direction: column;
+            gap: 10px;
+            font-size: 18px;
+        }
+    }
+
+}

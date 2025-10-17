@@ -1,0 +1,44 @@
+.scheme_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.scheme_item {
+  flex: none;
+  width: calc((100% - 32px) / 3);
+  box-sizing: border-box;
+  height: 320px;
+  display: flex;
+  flex-flow: column nowrap;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 16px;
+  }
+
+  :global {
+    .ant-card {
+      &-head {
+        flex: none;
+      }
+
+      &-body {
+        flex: auto;
+        padding: 0;
+        display: flex;
+        flex-flow: row nowrap;
+
+        & > * {
+          flex: 1;
+          box-sizing: border-box;
+
+          &:not(:last-child) {
+            border-right: 1px solid #e8e8e8;
+          }
+        }
+      }
+    }
+  }
+}
