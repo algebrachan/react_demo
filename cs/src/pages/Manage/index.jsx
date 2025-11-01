@@ -151,26 +151,27 @@ function Manage() {
     console.log(ipt);
   };
   useEffect(() => {
+    setMenu(default_menu);
     // 判断是什么角色
-    const user_str = getSession("user_info");
-    if (user_str) {
-      const { role_ids = [] } = JSON.parse(user_str);
-      if (role_ids.includes(0)) {
-        //如果角色是0(超管)
-        setMenu(default_menu);
-      } else {
-        const permissions_str = getSession("permissions");
-        if (permissions_str) {
-          let val = JSON.parse(permissions_str);
-          // 根据 list 生成树形结构
-          const tree_list = generateTree(val);
-          if (tree_list.length > 0) {
-            const menu = tree_list[0].children;
-            setMenu(menu);
-          }
-        }
-      }
-    }
+    // const user_str = getSession("user_info");
+    // if (user_str) {
+    //   const { role_ids = [] } = JSON.parse(user_str);
+    //   if (role_ids.includes(0)) {
+    //     //如果角色是0(超管)
+    //     setMenu(default_menu);
+    //   } else {
+    //     const permissions_str = getSession("permissions");
+    //     if (permissions_str) {
+    //       let val = JSON.parse(permissions_str);
+    //       // 根据 list 生成树形结构
+    //       const tree_list = generateTree(val);
+    //       if (tree_list.length > 0) {
+    //         const menu = tree_list[0].children;
+    //         setMenu(menu);
+    //       }
+    //     }
+    //   }
+    // }
   }, []);
   return (
     <div className="manage_root">

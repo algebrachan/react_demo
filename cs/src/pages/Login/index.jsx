@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
-import {Button, Form, Input, Carousel, message, Spin} from "antd";
+import React, { useEffect, useState } from "react";
+import { Button, Form, Input, Carousel, message, Spin } from "antd";
 import "./login.less";
-import {useNavigate, useSearchParams} from "react-router-dom";
-import {login} from "../../apis/auth_api";
-import {encryptDes} from "../AuthMngSys/utils/encode";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { login } from "../../apis/auth_api";
+import { encryptDes } from "../AuthMngSys/utils/encode";
 import {
   getLocal,
   setLocal,
@@ -14,14 +14,14 @@ import devImg from "./assets/show_img.png";
 import loginImg1 from "../../assets/login/1.jpg";
 import loginImg2 from "../../assets/login/2.jpg";
 
-const CarouselChild = ({title = "", desc = "", src = "", url = ""}) => {
+const CarouselChild = ({ title = "", desc = "", src = "", url = "" }) => {
   const handleClick = () => {
     console.log("点击跳转到对应页面", url);
   };
   return (
     <div className="carousel">
       <img
-        style={{width: 365, height: 203, cursor: "pointer"}}
+        style={{ width: 365, height: 203, cursor: "pointer" }}
         src={src}
         onClick={handleClick}
       />
@@ -33,27 +33,29 @@ const CarouselChild = ({title = "", desc = "", src = "", url = ""}) => {
 
 function Login() {
   const SYS_NAME = window.sys_name;
-  const FOOT_NAME = "浙江晶盛机电股份有限公司";
+  // const FOOT_NAME = "浙江晶盛机电股份有限公司";
+  const FOOT_NAME = "xxx有限公司";
   const [form] = Form.useForm();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   const [login_spin, setSpin] = useState(false);
   const [autoLoading, setAutoLoading] = useState(true);
   const submit = () => {
-    let val = form.getFieldsValue();
-    const {user_name = "", user_psw = ""} = val;
-    if (user_name === "" || user_psw === "") {
-      message.warning("请输入用户名和密码");
-      return;
-    }
-    let param = {
-      username: user_name,
-      password: encryptDes(user_psw),
-    };
-    loginRequest(param)
+    navigate('/mng')
+    // let val = form.getFieldsValue();
+    // const {user_name = "", user_psw = ""} = val;
+    // if (user_name === "" || user_psw === "") {
+    //   message.warning("请输入用户名和密码");
+    //   return;
+    // }
+    // let param = {
+    //   username: user_name,
+    //   password: encryptDes(user_psw),
+    // };
+    // loginRequest(param)
   };
   const autoNavigate = (permissions, toPath) => {
-    const qmsMenu = permissions.find(({menu_type, path}) => menu_type === '菜单' && ~(path?.indexOf(toPath) ?? -1))
+    const qmsMenu = permissions.find(({ menu_type, path }) => menu_type === '菜单' && ~(path?.indexOf(toPath) ?? -1))
     navigate(qmsMenu ? qmsMenu.path : '/mng')
   }
   const loginRequest = (param) => {
@@ -63,11 +65,11 @@ function Login() {
         param,
         (res) => {
           setSpin(false);
-          const {data, code, msg} = res.data;
+          const { data, code, msg } = res.data;
           if (data && code === 0) {
-            const {permissions, token, user_info} = data;
-            const {username} = user_info;
-            const {access_token} = token;
+            const { permissions, token, user_info } = data;
+            const { username } = user_info;
+            const { access_token } = token;
             setLocal("account", username);
             setSession("token", access_token);
             setSessionObj("permissions", permissions);
@@ -105,9 +107,9 @@ function Login() {
     const username = searchParams.get('username')
     const password = searchParams.get('password')
     if (token) {
-      loginRequest({token})
+      loginRequest({ token })
     } else if (username && password) {
-      loginRequest({username, password})
+      loginRequest({ username, password })
     } else {
       setAutoLoading(false)
     }
@@ -120,7 +122,7 @@ function Login() {
             !autoLoading && (
               <>
                 <div className="form_left">
-                  <Carousel style={{width: 365, margin: "188px auto"}} autoplay>
+                  <Carousel style={{ width: 365, margin: "188px auto" }} autoplay>
                     <CarouselChild
                       title="统计过程控制分析模块"
                       desc="通过实时监控生产过程的关键质量参数，确保生产过程的稳定性和一致性，从而提高产品质量，减少浪费，并优化生产效率"
